@@ -1,0 +1,23 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+<main role="main" class="pb-3">
+    <!-- Contenido principal -->
+    <div class="text-center mb-4">
+        <h1 class="display-4">Encuentra Tu Vuelo Ideal</h1>
+        <p>Explora y reserva los mejores vuelos a tu destino favorito. Descubre ofertas especiales y encuentra las
+            mejores opciones para tu viaje.</p>
+        <p>Para más información sobre cómo planificar tu viaje, visita
+            <br>
+
+
+            @await Html.PartialAsync("_SearchBar.cshtml")
+
+            @await Html.PartialAsync("_RecommendedFlights.cshtml")
+
+            @await Html.PartialAsync("_RecentSearches.cshtml")
+</main>
